@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivera Abogados</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: #050816;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(0,0,0,0.8);
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo h1 {
+      color: #d4af37;
+      font-size: 30px;
+    }
+
+    .logo p {
+      font-size: 13px;
+      color: #ccc;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h2 {
+      font-size: 65px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      color: #ddd;
+      margin-bottom: 35px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 35px;
+      margin: 10px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1da851;
+    }
+
+    .btn-contacto {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-contacto:hover {
+      border-color: #d4af37;
+      color: #d4af37;
+    }
+
+    .stats {
+      background: #0d1325;
+      padding: 70px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stats h3 {
+      color: #d4af37;
+      font-size: 50px;
+    }
+
+    .section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #bbb;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #10182d;
+      padding: 35px;
+      border-radius: 20px;
+      border: 1px solid #1f2a44;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #d4af37;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      background: #0d1325;
+      color: white;
+    }
+
+    form button {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 12px;
+      background: #d4af37;
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      background: black;
+      text-align: center;
+      padding: 30px;
+      color: #999;
+    }
+
+    @media(max-width: 768px) {
+      header {
+        padding: 15px 20px;
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 15px;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <h1>Olivera Abogados</h1>
+    <p>Penal · Civil · Familia</p>
+  </div>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h2>Asesoría Legal Profesional en Colombia</h2>
+
+    <p>
+      Especialistas en derecho penal, civil y de familia.
+      Defensa jurídica estratégica y acompañamiento profesional.
+    </p>
+
+    <a href="https://wa.me/573001112233" class="btn btn-whatsapp">
+      Solicitar Asesoría
+    </a>
+
+    <a href="#contacto" class="btn btn-contacto">
+      Contactar
+    </a>
+  </div>
+</section>
+
+<section class="stats">
+  <div>
+    <h3>150+</h3>
+    <p>Casos Atendidos</p>
+  </div>
+
+  <div>
+    <h3>24/7</h3>
+    <p>Atención Permanente</p>
+  </div>
+
+  <div>
+    <h3>98%</h3>
+    <p>Clientes Satisfechos</p>
+  </div>
+
+  <div>
+    <h3>100%</h3>
+    <p>Compromiso Profesional</p>
+  </div>
+</section>
+
+<section class="section" id="nosotros">
+  <div class="about">
+    <div>
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop" alt="Abogado">
+    </div>
+
+    <div>
+      <div class="section-title" style="text-align:left; margin-bottom:20px;">
+        <h2>Nosotros</h2>
+      </div>
+
+      <p>
+        En Olivera Abogados brindamos asesoría jurídica especializada
+        con ética, compromiso y atención personalizada.
+      </p>
+
+      <br>
+
+      <p>
+        Nuestro objetivo es defender los derechos e intereses de cada cliente
+        mediante estrategias legales efectivas y acompañamiento permanente.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="servicios">
+  <div class="section-title">
+    <h2>Áreas de Práctica</h2>
+
+    <p>
+      Soluciones jurídicas integrales adaptadas a las necesidades de cada cliente.
+    </p>
+  </div>
+
+  <div class="services">
+    <div class="card">
+      <h3>Derecho Penal</h3>
+
+      <p>
+        Defensa técnica, representación judicial,
+        acompañamiento a víctimas y asesoría penal.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Derecho Civil</h3>
+
+      <p>
+        Contratos, procesos ejecutivos,
+        responsabilidad civil y obligaciones.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Derecho de Familia</h3>
+
+      <p>
+        Divorcios, custodia, alimentos,
+        sucesiones y conciliaciones.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <div class="contact">
+    <div>
+      <div class="section-title" style="text-align:left; margin-bottom:20px;">
+        <h2>Contacto</h2>
+      </div>
+
+      <p>
+        Estamos disponibles para atender consultas y brindar orientación jurídica profesional.
+      </p>
+
+      <br>
+
+      <p>📞 +57 319 2774729</p>
+      <p>📧 contacto@oliveraabogados.com</p>
+      <p>📍 Bogotá D.C. – Colombia</p>
+    </div>
+
+    <div>
+      <form>
+        <input type="text" placeholder="Nombre completo">
+
+        <input type="email" placeholder="Correo electrónico">
+
+        <input type="text" placeholder="Número de teléfono">
+
+        <textarea rows="5" placeholder="Cuéntenos su caso"></textarea>
+
+        <button type="submit">Enviar Solicitud</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Olivera Abogados – Penal · Civil · Familia
+</footer>
+
+</body>
+</html>
